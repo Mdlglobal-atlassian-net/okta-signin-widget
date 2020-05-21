@@ -123,10 +123,10 @@ export default Model.extend({
     }
 
     // default terminal state for fall back
-    if (idxResp.context.terminal && _.isEmpty(idxResp.context.terminal.value)) {
+    if (idxResp.context.messages) {
       idxResp.terminal = {
         name: 'terminal',
-        value: [],
+        value: idxResp.context.messages.value.length ? idxResp.context.messages.value : [],
         uiSchema: [],
       };
     }

@@ -7,7 +7,8 @@ const idx = {
     // 'authenticator-select-verify-options',
     // 'authenticator-select-enroll-options',
     // 'identify',
-    'identify-locked-user'
+    // 'identify-locked-user'
+    'factor-verification-email'
   ],
   '/idp/idx': [
     'select-factor-authenticate'

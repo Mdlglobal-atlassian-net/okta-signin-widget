@@ -1,11 +1,19 @@
 {
-  "errorCode": "E0000068",
-  "errorSummary": "Invalid Passcode/Answer",
-  "errorLink": "E0000068",
-  "errorId": "oaeEtqUk5zeRVSlSM-jiw7GFA",
-  "errorCauses": [
-    {
-      "errorSummary": "Authentication failed"
-    }
-  ]
+  "stateHandle": "01OCl7uyAUC4CUqHsObI9bvFiq01cRFgbnpJQ1bz82",
+  "version": "1.0.0",
+  "expiresAt": "2020-05-18T20:42:23.000Z",
+  "step": "IDENTIFY",
+  "intent": "LOGIN",
+  "messages": {
+    "type": "array",
+    "value": [
+      {
+        "message": "Authentication failed",
+        "i18n": {
+          "key": "security.access_denied"
+        },
+        "class": "ERROR"
+      }
+    ]
+  }
 }
