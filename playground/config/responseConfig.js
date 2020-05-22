@@ -6,9 +6,9 @@ const idx = {
   '/idp/idx/introspect': [
     // 'authenticator-select-verify-options',
     // 'authenticator-select-enroll-options',
-    // 'identify',
+    'identify',
     // 'identify-locked-user'
-    'factor-verification-email'
+    // 'factor-verification-email'
   ],
   '/idp/idx': [
     'select-factor-authenticate'
@@ -36,7 +36,7 @@ const idx = {
     'factor-verification-email',
   ],
   '/idp/idx/challenge/poll': [
-    'authenticator-enroll-email',
+    // 'authenticator-enroll-email',
   ],
   '/idp/idx/challenge': [
     'authenticator-verification-webauthn',

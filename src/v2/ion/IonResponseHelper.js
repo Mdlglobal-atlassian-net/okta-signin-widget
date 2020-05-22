@@ -1,11 +1,19 @@
 import { _ } from 'okta';
 
+/*
+returns errors
+errors = [
+  {property : fieldName1, errorSummary: [errorMessage1]},
+  {property : fieldName2, errorSummary: [errorMessage1]}
+  {property : fieldName3, errorSummary: [errorMessage1, errorMessage2]}
+]
+*/
 const getRemediationErrors = (res) => {
   let errors = [];
   let remediationErrors = res.remediation && 
     res.remediation.value[0] && 
     _.omit(res.remediation.value[0].value, (value) => {
-      return value.name === 'stateHandle';
+      return (value.visible && !value.visible);
     });
 
   if (remediationErrors) {
@@ -30,6 +38,10 @@ const getRemediationErrors = (res) => {
   return errors;
 };
 
+/*
+  return global error summary combined into one string
+  allErrors = 'error string1. error string2'
+*/
 const getGlobalErrors  = (res) => {
   let allErrors = [];
 
@@ -41,7 +53,7 @@ const getGlobalErrors  = (res) => {
     });
   }
 
-  return allErrors.join('.');
+  return allErrors.join('. ');
 };
 
 const convertFormErrors = (response) => {

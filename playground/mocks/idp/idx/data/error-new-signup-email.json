@@ -1,5 +1,5 @@
 {
-  "stateHandle": "01OCl7uyAUC4CUqHsObI9bvFiq01cRFgbnpJQ1bz82",
+  "stateHandle": "01r2p5S9qaAjESMFuPzt7r3ZMcZZQ_vvS0Tzg56ajB",
   "version": "1.0.0",
   "expiresAt": "2020-05-06T00:42:17.000Z",
   "step": "ENROLL",
@@ -12,7 +12,7 @@
           "create-form"
         ],
         "name": "enroll-profile",
-        "href": "http://rain.okta1.com:1802/idp/idx/enroll/new",
+        "href": "http://localhost:3000/idp/idx/enroll/new",
         "method": "POST",
         "accepts": "json",
         "value": [
@@ -32,7 +32,7 @@
                 },
                 {
                   "name": "email",
-                  "label": "Email",
+                  "label": "Primary Email",
                   "required": true,
                   "messages": {
                     "type": "array",
