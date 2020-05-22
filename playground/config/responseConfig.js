@@ -21,7 +21,7 @@ const idx = {
     'authenticator-enroll-password',
   ],
   '/idp/idx/identify': [
-    'error-identify-access-denied',
+    // 'error-identify-access-denied',
     'error-identify-user-locked-unable-challenge'
   ],
   '/idp/idx/challenge/answer': [

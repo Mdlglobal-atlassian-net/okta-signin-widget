@@ -94,7 +94,7 @@ export default Controller.extend({
       model.trigger('error', model, { errorSummary: `Cannot find http action for "${formName}".`});
       return;
     }
-    this.toggleFormButtonState(model);
+    this.toggleFormButtonState(true);
     model.trigger('request');
     return idx.proceed(formName, model.toJSON())
       .then(resp => this.updateAppStateWithNewIdx(resp))
@@ -115,7 +115,7 @@ export default Controller.extend({
   showFormErrors (model, error) {
     const convertedErrors = IonResponseHelper.convertFormErrors(error);
     model.trigger('error', model, convertedErrors, convertedErrors.responseJSON.errorCauses.length ? false : true);
-    this.toggleFormButtonState(model);
+    this.toggleFormButtonState(false);
   },
 
   updateAppStateWithNewIdx: function (idxResp) {

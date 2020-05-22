@@ -1,7 +1,6 @@
 import { RequestMock } from 'testcafe';
 import IdentityPageObject from '../framework/page-objects/IdentityPageObject';
 import identify from '../../../playground/mocks/idp/idx/data/identify';
-import identifyLocked from '../../../playground/mocks/idp/idx/data/identify-locked-user';
 import errorIdentify from '../../../playground/mocks/idp/idx/data/error-identify-access-denied';
 
 const mock = RequestMock()
@@ -10,7 +9,7 @@ const mock = RequestMock()
 
 const identifyLockedUserMock = RequestMock()
   .onRequestTo('http://localhost:3000/idp/idx/introspect')
-  .respond(identifyLocked)
+  .respond(identify)
   .onRequestTo('http://localhost:3000/idp/idx/identify')
   .respond(errorIdentify, 403);
 
